@@ -1,0 +1,14 @@
+# WorkBuddy model route (www.workbuddy.cn).
+#
+# Authentication (first match wins):
+#   1. apiKey below
+#   2. WORKBUDDY_API_KEY / CODEBUDDY_AUTH_TOKEN / CODEBUDDY_API_KEY in the environment
+#   3. ~/.dsh/workbuddy/token  (one bearer token on the first line)
+#
+# Leave apiKey empty to use the environment or the token file. The endpoint,
+# headers, streaming decode and tool-call projection are fixed in index.js.
+- insert:
+    - id: dsh-llm-workbuddy
+      name: dsh-llm-workbuddy
+      config:
+        apiKey: ''

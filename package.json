@@ -1,0 +1,41 @@
+{
+  "name": "dsh-llm-workbuddy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "description": "WorkBuddy (Tencent) model route for DeepSeek Harness. Fill in one API key; no other configuration.",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "author": "KamishiroRei",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KamishiroRei/dsh-llm-workbuddy.git"
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "test:live": "node tests/live.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.5",
+    "@deepseek-ai/dsh-llm": "^0.2.1-rc.2"
+  }
+}
